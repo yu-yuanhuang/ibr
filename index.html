@@ -107,6 +107,34 @@
       text-decoration: none;
       color: var(--text);
       display: block;
+      position: relative;
+      padding-right: 132px;
+    }
+
+    .item a::after {
+      content: "點擊開啟 ↗";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%) scale(0.92);
+      background: linear-gradient(135deg, #2f5fa7 0%, #4f7fc7 100%);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      padding: 10px 14px;
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(47, 95, 167, 0.24);
+      opacity: 0;
+      transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+      pointer-events: none;
+      white-space: nowrap;
+    }
+
+    .item:hover a::after {
+      opacity: 1;
+      transform: translateY(-50%) scale(1);
+      box-shadow: 0 14px 30px rgba(47, 95, 167, 0.34);
     }
 
     .item-title {
@@ -166,6 +194,17 @@
       h1 { font-size: 28px; }
       .item-title { font-size: 18px; }
       .intro { font-size: 16px; }
+      .item a { padding-right: 0; padding-bottom: 52px; }
+      .item a::after {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        transform: scale(0.92);
+        opacity: 1;
+      }
+      .item:hover a::after {
+        transform: scale(1);
+      }
     }
   </style>
 </head>
@@ -210,6 +249,14 @@
             <div class="date">0417</div>
             <h3 class="item-title">Methodologies and methods for information behavior research</h3>
             <p class="item-desc">開啟同路徑檔案：04.pdf</p>
+          </a>
+        </article>
+
+        <article class="item">
+          <a href="05.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="date">0424</div>
+            <h3 class="item-title">Models and Phenomena</h3>
+            <p class="item-desc">開啟同路徑檔案：05.pdf</p>
           </a>
         </article>
       </div>
