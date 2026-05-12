@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IB&R 課程閱讀</title>
+  <title>IB&R 與圖書資訊學研究趨勢</title>
   <style>
     :root {
       --bg: #f5f7fb;
@@ -188,60 +188,170 @@
       text-decoration: underline;
     }
 
-    @media (max-width: 640px) {
-      .wrap { padding: 28px 16px 20px; }
-      .hero, .item, .footer-card { padding: 22px 18px; }
-      h1 { font-size: 28px; }
-      .item-title { font-size: 18px; }
-      .intro { font-size: 16px; }
-      .item a { padding-right: 0; padding-bottom: 52px; }
-      .item a::after {
-        top: auto;
-        bottom: 0;
-        right: 0;
-        transform: scale(0.92);
-        opacity: 1;
-      }
-      .item:hover a::after {
-        transform: scale(1);
-      }
+
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 22px;
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 8px;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 14px;
+      z-index: 10;
+      backdrop-filter: blur(12px);
     }
-  </style>
-</head>
-<body>
+
+    .tab-button {
+      appearance: none;
+      border: 0;
+      cursor: pointer;
+      border-radius: 999px;
+      padding: 12px 18px;
+      background: transparent;
+      co<body>
   <div class="wrap">
-    <section class="hero">
-      <div class="eyebrow">IB&amp;R</div>
-      <h1>Information Behavior &amp; Research</h1>
-      <p class="intro">本頁整理IB&amp;R課程的閱讀與課程產出，作為每週主題文獻與學習成果的集中入口。<br>
-      內容依課程進度持續累積，方便查閱、回顧與延伸閱讀。</p>
+    <nav class="tabs" aria-label="課程頁籤">
+      <button class="tab-button active" type="button" data-tab="ibr" aria-controls="ibr" aria-selected="true">IB&amp;R</button>
+      <button class="tab-button" type="button" data-tab="lis-trends" aria-controls="lis-trends" aria-selected="false">圖書資訊學研究趨勢</button>
+    </nav>
+
+    <section id="ibr" class="tab-panel active" role="tabpanel">
+      <section class="hero">
+        <div class="eyebrow">IB&amp;R</div>
+        <h1>Information Behavior &amp; Research</h1>
+        <p class="intro">本頁整理IB&amp;R課程的閱讀與課程產出，作為每週主題文獻與學習成果的集中入口。<br>
+        內容依課程進度持續累積，方便查閱、回顧與延伸閱讀。</p>
+      </section>
+
+      <main>
+        <h2 class="section-title">課程產出</h2>
+        <div class="list">
+          <article class="item">
+            <a href="01.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="date">0313</div>
+              <h3 class="item-title">States of use and users research</h3>
+              <p class="item-desc">開啟同路徑檔案：01.pdf</p>
+            </a>
+          </article>
+
+          <article class="item">
+            <a href="02.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="date">0320</div>
+              <h3 class="item-title">Foundations of Use and Users Studies</h3>
+              <p class="item-desc">開啟同路徑檔案：02.pdf</p>
+            </a>
+          </article>
+
+          <article class="item">
+            <a href="03.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="date">0326</div>
+              <h3 class="item-title">Theories, Conceptual Frameworks</h3>
+              <p class="item-desc">開啟同路徑檔案：03.pdf</p>
+            </a>
+          </article>
+
+          <article class="item">
+            <a href="04.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="date">0417</div>
+              <h3 class="item-title">Methodologies and methods for information behavior research</h3>
+              <p class="item-desc">開啟同路徑檔案：04.pdf</p>
+            </a>
+          </article>
+
+          <article class="item">
+            <a href="05.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="date">0424</div>
+              <h3 class="item-title">Models and Phenomena</h3>
+              <p class="item-desc">開啟同路徑檔案：05.pdf</p>
+            </a>
+          </article>
+
+          <article class="item">
+            <a href="06.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="date">0508</div>
+              <h3 class="item-title">Studies of Scientists, Cyberinfrastructures and the Production of Scientific Knowledge</h3>
+              <p class="item-desc">開啟同路徑檔案：06.pdf</p>
+            </a>
+          </article>
+        </div>
+      </main>
     </section>
 
-    <main>
-      <h2 class="section-title">課程產出</h2>
-      <div class="list">
-        <article class="item">
-          <a href="01.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="date">0313</div>
-            <h3 class="item-title">States of use and users research</h3>
-            <p class="item-desc">開啟同路徑檔案：01.pdf</p>
-          </a>
-        </article>
+    <section id="lis-trends" class="tab-panel" role="tabpanel">
+      <section class="hero">
+        <div class="eyebrow">圖書資訊學研究趨勢</div>
+        <h1>圖書資訊學研究趨勢</h1>
+        <p class="intro">本頁整理[圖書資訊學研究趨勢]課程的閱讀與課程產出，作為每週主題文獻與學習成果的集中入口。<br>
+        內容依課程進度持續累積，方便查閱、回顧與延伸閱讀。</p>
+      </section>
 
-        <article class="item">
-          <a href="02.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="date">0320</div>
-            <h3 class="item-title">Foundations of Use and Users Studies</h3>
-            <p class="item-desc">開啟同路徑檔案：02.pdf</p>
-          </a>
-        </article>
+      <main>
+        <h2 class="section-title">課程產出</h2>
+        <div class="list">
+          <article class="item">
+            <a href="檔案學及檔案管理趨勢-簡報[YY]2026-4-28.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="date">2026-4-28</div>
+              <div class="meta">
+                <span>授課教授：林巧敏</span>
+              </div>
+              <h3 class="item-title">研究趨勢：</h3>
+              <p class="item-desc">請點擊開啟同路徑下[檔案學及檔案管理趨勢-簡報[YY]2026-4-28.pdf]</p>
+              <p class="download-name">下載檔名：檔案學及檔案管理趨勢-簡報[YY]2026-4-28.pdf</p>
+            </a>
+          </article>
 
-        <article class="item">
-          <a href="03.pdf" target="_blank" rel="noopener noreferrer">
-            <div class="date">0326</div>
-            <h3 class="item-title">Theories, Conceptual Frameworks</h3>
-            <p class="item-desc">開啟同路徑檔案：03.pdf</p>
-          </a>
+          <article class="item">
+            <a href="檔案學及檔案管理趨勢-簡報[YY]2026-5-12.pdf" target="_blank" rel="noopener noreferrer">
+              <div class="date">2026-5-12</div>
+              <div class="meta">
+                <span>授課教授：陳志銘</span>
+              </div>
+              <h3 class="item-title">檔案學及檔案管理趨勢-簡報[1]：TopicENA</h3>
+              <p class="item-desc">請點擊開啟同路徑下[檔案學及檔案管理趨勢-簡報[YY]2026-5-12.pdf]</p>
+              <p class="download-name">下載檔名：檔案學及檔案管理趨勢-簡報[YY]2026-5-12.pdf</p>
+            </a>
+          </article>
+        </div>
+      </main>
+    </section>
+
+    <footer>
+      <div class="footer-card">
+        <p class="footer-title">Author &amp; Academic Profiles</p>
+        <div class="footer-links">
+          <a href="https://orcid.org/0000-0003-3475-4735" target="_blank" rel="noopener noreferrer">https://orcid.org/0000-0003-3475-4735</a>
+          <a href="https://scholar.google.com.tw/citations?user=fl1vh3YAAAAJ&amp;hl=zh-TW" target="_blank" rel="noopener noreferrer">https://scholar.google.com.tw/citations?user=fl1vh3YAAAAJ&amp;hl=zh-TW</a>
+          <a href="https://www.researchgate.net/profile/Yuyuan-Huang-3" target="_blank" rel="noopener noreferrer">https://www.researchgate.net/profile/Yuyuan-Huang-3</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const target = button.dataset.tab;
+
+        tabButtons.forEach((btn) => {
+          const isActive = btn === button;
+          btn.classList.toggle('active', isActive);
+          btn.setAttribute('aria-selected', String(isActive));
+        });
+
+        tabPanels.forEach((panel) => {
+          panel.classList.toggle('active', panel.id === target);
+        });
+      });
+    });
+  </script>
+</body>         </a>
         </article>
 
         <article class="item">
